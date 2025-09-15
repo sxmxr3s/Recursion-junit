@@ -1,5 +1,44 @@
 package recursion;
 
+/**
+ * 
+ * 
+ * @author samar
+ */
 public class Recursion {
 
+	/**
+	 *This method returns the sum of all the digits. 
+	 *Notice that the minus sign is ignored. 
+	 *
+	 * @param n The number sent to be split and added together.
+	 * @return The sum of all the digits within parameter n.
+	 */
+	public static int sumOfDigits(int n) {
+		return 0; //TO-DO
+	}
+	
+	/**
+	 * This method separates all characters by a space and
+	 * changes all lowercase letters to uppercase letters.
+	 * 
+	 * @param str String of characters sent to method.
+	 * @return The string with all its characters made uppercase.
+	 */
+	public static String toUpper(String str) {
+		return null; // TO-DO
+	}
+	
+	/**
+	 * This method counts the number of colons followed by a 
+	 * closing parenthesis starting at the specified index.
+	 * An empty character array should return zero.
+	 * 
+	 * @param letters An array of characters.
+	 * @param index The index that is being searched in the array.
+	 * @return Number of colons followed by a closing parenthesis.
+	 */
+	public static int countSmiles(char[] letters, int index) {
+		return 0; //TO-DO
+	}
 }

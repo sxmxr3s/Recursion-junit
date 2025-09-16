@@ -1,15 +1,16 @@
 package recursion;
 
 /**
- * 
+ * This class conatins the methods that do the counting,
+ * letter capitalization, and find the harmonic numbers.
  * 
  * @author samar
  */
 public class Recursion {
 
 	/**
-	 *This method returns the sum of all the digits. 
-	 *Notice that the minus sign is ignored. 
+	 * Returns the sum of all the digits. 
+	 * Notice that the minus sign is ignored. 
 	 *
 	 * @param n The number sent to be split and added together.
 	 * @return The sum of all the digits within parameter n.
@@ -19,18 +20,18 @@ public class Recursion {
 	}
 	
 	/**
-	 * This method separates all characters by a space and
-	 * changes all lowercase letters to uppercase letters.
+	 * Separates all characters by a space and
+	 * changes all lower-case letters to upper-case letters.
 	 * 
 	 * @param str String of characters sent to method.
-	 * @return The string with all its characters made uppercase.
+	 * @return The string with all its characters made upper-case.
 	 */
 	public static String toUpper(String str) {
 		return null; // TO-DO
 	}
 	
 	/**
-	 * This method counts the number of colons followed by a 
+	 * Counts the number of colons followed by a 
 	 * closing parenthesis starting at the specified index.
 	 * An empty character array should return zero.
 	 * 
@@ -40,5 +41,28 @@ public class Recursion {
 	 */
 	public static int countSmiles(char[] letters, int index) {
 		return 0; //TO-DO
+	}
+	
+	/**
+	 * Returns a harmonic number, which is a sum of reciprocals 
+	 * of natural numbers, or the inverse of a harmonic number
+	 * if it is negative.
+	 * 
+	 * @throws An IllegalArgumentException if the user input is
+	 * equal to zero.
+	 * @param n Integer sent to the method.
+	 * @return The n-th harmonic number or the inverse of the n-th
+	 * harmonic number.
+	 */
+	public static double harmonic(int n) {
+		if (n == 0) {
+			throw new IllegalArgumentException("Number cannot be zero.");
+		}
+		else if (n > 0) {
+			return (double)1/n + harmonic(n - 1);
+		}
+		else {
+			return (double)n + (-n);
+		} 
 	}
 }

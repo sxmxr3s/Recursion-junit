@@ -1,31 +1,34 @@
-import org.junit.jupiter.api.Test;
+package recursion;
+
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.Test;
+
 public class HarmonicTest{
-  private static final double DELTA = 1e-9;
+	  private static final double DELTA = 1e-9;
 
-  @Test
-  public void testHarmonicPositiveSmall(){
-    assertEquals(1.0, Recursion1.harmonic(1),DELTA);
-  }
-   @Test
-  public void testHarmonicPositiveThree(){
-    assertEquals(1.0+5.0+0.333333, Recursion1.harmonic(3),DELTA);
-  }
-   @Test
-  public void testHarmonicNegative(){
-    assertEquals(1.0/1.5, Recursion1.harmonic(-2),DELTA);
-  }
-   @Test
-  public void testHarmonicPositiveLarger(){
-    double expected = 1.0 + 0.5 + 0.333333 + 0.25 + 0.2;
-    assertEquals(expected, Recursion1.harmonic(5),DELTA);
-  }
-   @Test
-  public void testHarmonicPositiveZeroThrows(){
-    assertThrows(IllegalArgumentException.class, ()->{
-      Recursion1.harmonic(0);
-    });
-  }
+	  @Test
+	  void testHarmonicPositiveSmall(){
+	    assertEquals(1.0, Recursion.harmonic(1),DELTA);
+	  }
+	   @Test
+	  void testHarmonicPositiveThree(){
+	    assertEquals(1.0+1.0/2+1.0/3, Recursion.harmonic(3),DELTA);
+	  }
+	   @Test
+	  void testHarmonicNegative(){
+	    assertEquals(1.0/1.5, Recursion.harmonic(-2),DELTA);
+	  }
+	   @Test
+	  void testHarmonicPositiveLarger(){
+	    double expected = 1.0 + 0.5 + 1.0/3 + 0.25 + 0.2;
+	    assertEquals(expected, Recursion.harmonic(5),DELTA);
+	  }
+	   @Test
+	  void testHarmonicPositiveZeroThrows(){
+	    assertThrows(IllegalArgumentException.class, ()->{
+	      Recursion.harmonic(0);
+	    });
+	  }
 
-}
+	}
